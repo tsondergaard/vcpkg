@@ -1,0 +1,14 @@
+diff --git a/src/3rdparty/chromium/printing/buildflags/buildflags.gni b/src/3rdparty/chromium/printing/buildflags/buildflags.gni
+index fa9004e2ec3..025545f33c6 100644
+--- a/src/3rdparty/chromium/printing/buildflags/buildflags.gni
++++ b/src/3rdparty/chromium/printing/buildflags/buildflags.gni
+@@ -36,8 +36,7 @@ declare_args() {
+     # For fuzzing, just restrict to chromeos and linux.
+     use_cups = true
+   } else {
+-    use_cups = (is_chromeos_device || (is_linux && !is_castos) || is_mac) &&
+-               !is_fuchsia
++    use_cups = false
+   }
+
+   # Enables out-of-process printing. While this definition matches
